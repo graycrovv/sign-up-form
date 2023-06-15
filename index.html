@@ -9,13 +9,61 @@
   </head>
   <body>
     <main>
-      <aside></aside>
-      <form>
-        <label for="first-name">first name</label>
-        <input type="text" id="first-name" name="first-name" />
-        <label for="last-name">last name</label>
-        <input type="text" id="last-name" name="last-name" />
-      </form>
+      <aside><h1>welcome!</h1></aside>
+      <div class="form">
+        <div class="intro-text">
+          <p>
+            Hey there! Just a heads up, this site isn't real—it's all about
+            practicing sign-up forms. So, feel free to tinker around, test
+            different fields, and get the hang of it. No worries, none of the
+            info you enter here will go anywhere. It's all for fun and learning.
+          </p>
+        </div>
+        <form method="post">
+          <fieldset>
+            <div class="first-name">
+              <label for="first-name">First Name</label>
+              <input type="text" id="first-name" name="first-name" />
+            </div>
+            <div class="last-name">
+              <label for="last-name">Last Name</label>
+              <input type="text" id="last-name" name="last-name" />
+            </div>
+            <div class="email">
+              <label for="user_email">Email Address</label>
+              <input
+                type="email"
+                id="user_email"
+                name="email"
+                placeholder="you@example.com" />
+            </div>
+            <div class="phone-number">
+              <label for="phone_number">Phone Number</label>
+              <input type="tel" id="phone_number" name="phone_number" />
+            </div>
+            <div class="password">
+              <label for="user_password">Password</label>
+              <input
+                required
+                minlength="8"
+                type="password"
+                id="user_password"
+                name="password"
+                aria-describedby="password-minlength" />
+            </div>
+            <div class="password-confirm">
+              <label for="user_password_confirm">Confirm password</label>
+              <input
+                required
+                minlength="8"
+                type="password"
+                id="user_password_confirm"
+                name="password-confirm"
+                aria-describedby="password-minlength" />
+            </div>
+          </fieldset>
+        </form>
+      </div>
     </main>
   </body>
 </html>

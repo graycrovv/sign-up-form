@@ -1,14 +1,5 @@
-body {
-  background: cornflowerblue;
-}
-
-aside {
-  width: 100px;
-  height: 100px;
-  background: #000;
-}
-form {
-  width: 100px;
-  height: 100px;
-  background: pink;
-}
+@forward "./base/normalize";
+@forward "./layout/layout";
+@forward "./layout/side";
+@forward "./layout/form";
+@forward "./abstracts/variables";
