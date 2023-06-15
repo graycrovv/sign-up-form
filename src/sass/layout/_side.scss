@@ -1,0 +1,17 @@
+aside {
+  background-image: url("/src/img/maincrow.jpg");
+  background-size: cover;
+  background-position: center;
+  @media (orientation: portrait) {
+    background-position: 0 40%;
+  }
+}
+h1 {
+  height: 8vh;
+  padding: 10px;
+  font-size: 8vh;
+  text-align: center;
+  color: white;
+  background-color: rgba(var(--main-rgb), 0.5);
+  font-family: var(--font-title);
+}

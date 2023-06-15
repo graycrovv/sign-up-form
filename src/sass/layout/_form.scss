@@ -1,0 +1,32 @@
+@use "../abstracts/variables" as *;
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-family);
+  color: white;
+  background-color: var(--main-color);
+}
+
+form {
+  width: 80%;
+}
+fieldset {
+  display: grid;
+  justify-content: space-evenly;
+  column-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(8rem, 20rem));
+  background-color: transparent;
+  border-left: none;
+  border-right: none;
+  font-size: 1.6em;
+  div {
+    display: flex;
+    flex-direction: column;
+  }
+}
+label {
+  display: inline-block;
+}
