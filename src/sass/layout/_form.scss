@@ -3,28 +3,40 @@
 .form {
   display: flex;
   flex-wrap: wrap;
+  gap: 1rem;
   justify-content: center;
+  align-content: center;
   align-items: center;
   font-family: var(--font-family);
   color: white;
   background-color: var(--main-color);
 }
 
+.intro-text {
+  max-width: 90%;
+  color: var(--crow-color);
+}
 form {
-  width: 80%;
+  width: 90%;
 }
 fieldset {
   display: grid;
   justify-content: space-evenly;
   column-gap: 10px;
-  grid-template-columns: repeat(auto-fit, minmax(8rem, 22rem));
+
+  grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+  font-size: min(2vw, 1.6rem);
   background-color: transparent;
-  border-left: none;
-  border-right: none;
-  font-size: 1.6em;
+  border: none;
   div {
     display: flex;
     flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: 1.6rem;
+  }
+  @media (orientation: portrait) {
+    grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+    font-size: 1.6rem;
   }
 }
 label {

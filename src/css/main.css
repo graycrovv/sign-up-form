@@ -323,14 +323,14 @@ body {
 main {
   display: grid;
   grid-auto-flow: column;
-  grid-template-columns: repeat(1, minmax(0, 1fr)) repeat(1, minmax(0, 1.5fr));
+  grid-template-columns: repeat(1, minmax(0, 1.2fr)) repeat(1, minmax(0, 1.5fr));
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   height: 85%;
   width: 85%;
-  min-width: 20rem;
+  min-width: 30rem;
   border-radius: 20px;
   border: 4px solid black;
   outline: 3px solid rgba(255, 255, 255, 0.849);
@@ -338,6 +338,7 @@ main {
 }
 @media (orientation: portrait) {
   main {
+    height: 95%;
     grid-auto-flow: row;
     grid-template-columns: 1fr;
   }
@@ -358,18 +359,29 @@ aside {
 h1 {
   display: flex;
   justify-content: center;
-  height: 6vh;
+  height: max(3.2rem, 5.5vh);
   padding: 10px;
-  font-size: 6vh;
   text-align: center;
   color: rgb(var(--main-rgb));
   background-color: rgba(255, 255, 255, 0.6);
+  font-size: max(3.2rem, 5.5vh);
   font-family: var(--font-title);
+}
+@media (orientation: portrait) {
+  h1 {
+    height: clamp(1.8rem, 6vh, 3.6rem);
+    font-size: clamp(1.8rem, 6vh, 3.6rem);
+  }
 }
 
 .icon {
-  height: 6vh;
-  margin: 0 1.5rem;
+  height: max(3.2rem, 5.5vh);
+  margin: 0 1rem;
+}
+@media (orientation: portrait) {
+  .icon {
+    height: clamp(1.8rem, 6vh, 3.6rem);
+  }
 }
 
 .credit {
@@ -383,37 +395,51 @@ h1 {
   --font-title: "Castoro Titling", cursive;
   --main-rgb: 25, 24, 37;
   --main-color: rgb(25, 24, 37);
-  --crow-color: rgb(104, 116, 140);
+  --crow-color: rgb(174, 187, 213);
   font-size: 10px;
 }
 
 .form {
   display: flex;
   flex-wrap: wrap;
+  gap: 1rem;
   justify-content: center;
+  align-content: center;
   align-items: center;
   font-family: var(--font-family);
   color: white;
   background-color: var(--main-color);
 }
 
+.intro-text {
+  max-width: 90%;
+  color: var(--crow-color);
+}
+
 form {
-  width: 80%;
+  width: 90%;
 }
 
 fieldset {
   display: grid;
   justify-content: space-evenly;
   column-gap: 10px;
-  grid-template-columns: repeat(auto-fit, minmax(8rem, 22rem));
+  grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+  font-size: min(2vw, 1.6rem);
   background-color: transparent;
-  border-left: none;
-  border-right: none;
-  font-size: 1.6em;
+  border: none;
 }
 fieldset div {
   display: flex;
   flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1.6rem;
+}
+@media (orientation: portrait) {
+  fieldset {
+    grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+    font-size: 1.6rem;
+  }
 }
 
 label {
