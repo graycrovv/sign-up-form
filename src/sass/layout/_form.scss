@@ -3,7 +3,7 @@
 .form {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 4vh;
   justify-content: center;
   align-content: center;
   align-items: center;
@@ -14,6 +14,8 @@
 
 .intro-text {
   max-width: 90%;
+  font-size: 1.6rem;
+  text-align: justify;
   color: var(--crow-color);
 }
 form {
@@ -23,7 +25,6 @@ fieldset {
   display: grid;
   justify-content: space-evenly;
   column-gap: 10px;
-
   grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
   font-size: min(2vw, 1.6rem);
   background-color: transparent;
@@ -34,6 +35,9 @@ fieldset {
     gap: 0.4rem;
     margin-bottom: 1.6rem;
   }
+  input {
+    padding: 0.4rem;
+  }
   @media (orientation: portrait) {
     grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
     font-size: 1.6rem;
@@ -41,4 +45,13 @@ fieldset {
 }
 label {
   display: inline-block;
+}
+.btn {
+  all: unset;
+  margin: 0.5rem 1rem;
+  padding: 0.8rem 1.6rem;
+  height: 2rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  border: 2px solid var(--crow-color);
 }

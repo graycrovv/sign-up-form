@@ -15,8 +15,9 @@ h1 {
   text-align: center;
   color: rgb(var(--main-rgb));
   background-color: rgba(white, 0.6);
+  text-transform: uppercase;
   font-size: max(3.2rem, 5.5vh);
-  font-family: var(--font-title);
+  font-weight: 400;
   @media (orientation: portrait) {
     height: clamp(1.8rem, 6vh, 3.6rem);
     font-size: clamp(1.8rem, 6vh, 3.6rem);
@@ -33,4 +34,7 @@ h1 {
   position: absolute;
   bottom: 0;
   right: 0;
+  padding: 2px;
+  color: rgba(47, 26, 130, 0.537);
+  text-decoration: none;
 }
