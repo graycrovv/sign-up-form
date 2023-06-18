@@ -1,4 +1,5 @@
 aside {
+  position: relative;
   background-image: url("/src/img/maincrow.jpg");
   background-size: cover;
   background-position: center;
@@ -7,11 +8,22 @@ aside {
   }
 }
 h1 {
-  height: 8vh;
+  display: flex;
+  justify-content: center;
+  height: 6vh;
   padding: 10px;
-  font-size: 8vh;
+  font-size: 6vh;
   text-align: center;
-  color: white;
-  background-color: rgba(var(--main-rgb), 0.5);
+  color: rgb(var(--main-rgb));
+  background-color: rgba(white, 0.6);
   font-family: var(--font-title);
+}
+.icon {
+  height: 6vh;
+  margin: 0 1.5rem;
+}
+.credit {
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
