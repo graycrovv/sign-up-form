@@ -35,6 +35,19 @@ h1 {
   bottom: 0;
   right: 0;
   padding: 2px;
-  color: rgba(47, 26, 130, 0.537);
+  color: var(--credit-color);
   text-decoration: none;
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: var(--credit-color);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: ease-in 0.2s;
+  }
+  &:hover::after {
+    transform: scaleX(1);
+  }
 }
