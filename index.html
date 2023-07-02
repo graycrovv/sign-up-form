@@ -62,12 +62,12 @@
                 required />
             </div>
             <div class="email">
-              <label for="user_email"
+              <label for="user-email"
                 ><i class="fa-regular fa-envelope"></i> Email Address</label
               >
               <input
                 type="email"
-                id="user_email"
+                id="user-email"
                 name="email"
                 autocomplete="email"
                 placeholder="you@example.com"
@@ -75,8 +75,9 @@
             </div>
             <div class="phone-number">
               <label for="phone-number"
-                ><i class="fa-solid fa-phone"></i> Phone Number</label
-              >
+                ><i class="fa-solid fa-phone"></i> Phone Number
+                <span class="verify"><i class="fa-solid fa-xmark"></i> </span>
+              </label>
               <input
                 type="tel"
                 id="phone-number"
@@ -85,32 +86,32 @@
                 required />
             </div>
             <div class="password">
-              <label for="user_password"
+              <label for="user-password"
                 ><i class="fa-solid fa-lock"></i> Password
                 <span class="verify" id="password-minlength"
-                  ><i class="fa-solid fa-xmark"></i
-                  ><i class="fa-solid fa-check hidden"></i> 8 characters</span
+                  ><i class="fa-solid fa-xmark"></i> 8 characters</span
                 ></label
               >
               <input
                 minlength="8"
                 type="password"
-                id="user_password"
+                class="password"
+                id="user-password"
                 name="password"
                 aria-describedby="password-minlength"
                 required />
             </div>
             <div class="password-confirm">
-              <label for="user_password_confirm"
+              <label for="user-password-confirm"
                 ><i class="fa-solid fa-key"></i> Confirm password
                 <span class="verify" id="password-minlength-confirm"
-                  ><i class="fa-solid fa-xmark"></i
-                  ><i class="fa-solid fa-check hidden"></i></span
+                  ><i class="fa-solid fa-xmark"></i> </span
               ></label>
               <input
                 minlength="8"
                 type="password"
-                id="user_password_confirm"
+                class="password-confirm"
+                id="user-password-confirm"
                 name="password-confirm"
                 aria-describedby="password-minlength-confirm"
                 required />
