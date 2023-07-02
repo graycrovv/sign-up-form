@@ -1,6 +1,7 @@
 @use "../abstracts/variables" as *;
 .hidden {
   display: none;
+  color: transparent;
 }
 .form {
   display: flex;
@@ -49,6 +50,7 @@ fieldset {
   input {
     padding: 0.4rem;
   }
+  //focus border
   input:autofill {
     border: 2px solid var(--accent-color);
     box-shadow: 0 0 5px rgb(224, 182, 255);
@@ -58,9 +60,16 @@ fieldset {
     border: 2px solid var(--accent-color);
     box-shadow: 0 0 5px rgb(224, 182, 255);
   }
+  //
+  span {
+    font-size: min(1.3vw, 1.4rem);
+    transition: 0.2s;
+  }
   .verify {
-    color: gray;
-    font-size: min(1.2vw, 1rem);
+    color: firebrick;
+  }
+  .verified {
+    color: green;
   }
   @media (orientation: portrait) {
     grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
