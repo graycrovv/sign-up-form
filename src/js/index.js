@@ -94,8 +94,6 @@ const checkPasswordMatch = () => {
   }
 };
 const checkValidation = (value, input) => {
-  console.log(value);
-  console.log(patterns[value].test(input));
   if (value === "telephone") {
     if (patterns[value].test(input)) {
       changeToCheckedMark(telephoneXMark);
