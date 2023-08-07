@@ -536,20 +536,21 @@ fieldset .verified {
 
 .tooltip {
   position: relative;
-  display: inline-block;
+  display: block;
+  transition: 0.4s;
 }
 
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 120px;
-  background-color: var(--accent-color);
+  width: 50%;
+  background-color: rgb(var(--accent-rgb), 80%);
   color: white;
   text-align: center;
   border-radius: 6px;
   padding: 5px 0;
   position: absolute;
-  left: 50%;
-  top: -100%;
+  top: 0;
+  left: -55%;
   z-index: 1;
 }
 
