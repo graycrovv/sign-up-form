@@ -68,8 +68,9 @@ const telephoneXMark = document.querySelector(".telephone .fa-xmark");
 const passwordXMark = document.querySelector(".password .fa-xmark");
 const confirmationXMark = document.querySelector(".password-confirm .fa-xmark");
 const patterns = {
-  telephone: /^[0-9]{9}$/,
-  password: new RegExp(/^^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/),
+  telephone:
+    /^(\+48(\ )?)?(([0-9]{3}(\ )[0-9]{3}(\ )[0-9]{3})|([0-9]{9})|([0-9]{3}\-[0-9]{3}\-[0-9]{3}))$/,
+  password: new RegExp(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/),
 };
 
 const changeToXMark = (icon) => {
@@ -109,7 +110,7 @@ const checkValidation = (value, input) => {
     }
   }
 };
-//try to write validation that operates on "general" vars, so it's less code (one if instead of seperate ones for password and phone num)
+
 inputs.forEach((input) => {
   input.addEventListener("input", (e) => {
     inputName = e.target.attributes.name.value;
