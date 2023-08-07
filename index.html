@@ -86,12 +86,14 @@
                 required />
             </div>
             <div class="password">
-              <label for="user-password"
-                ><i class="fa-solid fa-lock"></i> Password
+              <label for="user-password" class="tooltip"
+                ><span class="tooltiptext"
+                  >At least 8 characters, a number and a special character</span
+                >
+                <i class="fa-solid fa-lock"></i> Password
                 <span class="verify" id="password-minlength"
-                  ><i class="fa-solid fa-xmark"></i> 8 characters</span
-                ></label
-              >
+                  ><i class="fa-solid fa-xmark"></i></span
+              ></label>
               <input
                 minlength="8"
                 type="password"
