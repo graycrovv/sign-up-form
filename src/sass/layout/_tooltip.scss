@@ -1,23 +1,25 @@
 @use "../abstracts/variables" as *;
 
 .tooltip {
-  position: relative;
   display: block;
-  transition: 0.4s;
+  position: relative;
+  transition: 0.2s;
 }
-.tooltip .tooltiptext {
+.tooltiptext {
   visibility: hidden;
   width: 50%;
   background-color: rgb(var(--accent-rgb), 80%);
+  box-shadow: 4px 4px purple;
   color: white;
+  font-size: 1.2rem;
   text-align: center;
   border-radius: 6px;
-  padding: 5px 0;
+  padding: 5px 5px;
   position: absolute;
   top: 0;
-  left: -55%;
-
+  right: 0;
   z-index: 1;
+  transform: translateX(-10%);
 }
 
 .tooltip:hover .tooltiptext {

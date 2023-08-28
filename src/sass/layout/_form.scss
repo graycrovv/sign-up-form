@@ -26,7 +26,7 @@ form {
 }
 legend {
   margin-bottom: 1.5rem;
-  font-size: min(2vw, 2rem);
+  font-size: min(4vw, 2.6rem);
   color: var(--crow-color);
 }
 fieldset {
@@ -62,11 +62,11 @@ fieldset {
   }
   //
   span {
-    font-size: min(1.3vw, 1.4rem);
     transition: 0.2s;
   }
   .verify {
     color: firebrick;
+    font-size: max(1.3vw, 1.4rem);
   }
   .verified {
     color: green;

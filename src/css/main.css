@@ -452,7 +452,7 @@ form {
 
 legend {
   margin-bottom: 1.5rem;
-  font-size: min(2vw, 2rem);
+  font-size: min(4vw, 2.6rem);
   color: var(--crow-color);
 }
 
@@ -487,11 +487,11 @@ fieldset input:-webkit-autofill {
   box-shadow: 0 0 5px rgb(224, 182, 255);
 }
 fieldset span {
-  font-size: min(1.3vw, 1.4rem);
   transition: 0.2s;
 }
 fieldset .verify {
   color: firebrick;
+  font-size: max(1.3vw, 1.4rem);
 }
 fieldset .verified {
   color: green;
@@ -535,23 +535,26 @@ fieldset .verified {
 }
 
 .tooltip {
-  position: relative;
   display: block;
-  transition: 0.4s;
+  position: relative;
+  transition: 0.2s;
 }
 
-.tooltip .tooltiptext {
+.tooltiptext {
   visibility: hidden;
   width: 50%;
   background-color: rgb(var(--accent-rgb), 80%);
+  box-shadow: 4px 4px purple;
   color: white;
+  font-size: 1.2rem;
   text-align: center;
   border-radius: 6px;
-  padding: 5px 0;
+  padding: 5px 5px;
   position: absolute;
   top: 0;
-  left: -55%;
+  right: 0;
   z-index: 1;
+  transform: translateX(-10%);
 }
 
 .tooltip:hover .tooltiptext {
