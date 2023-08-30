@@ -1,4 +1,3 @@
-const submitBtn = document.querySelector('button[type="submit"]');
 const inputs = document.querySelectorAll("input");
 const password = document.querySelector('input[name="password"]');
 const passwordConfirmation = document.querySelector(
